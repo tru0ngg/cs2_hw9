@@ -16,14 +16,14 @@ int stirling(int n, int k, int depth){
 
         if (n == k){
                 result = 1;
-        } else if (k == 0 && n > 0){
-                result = 0;
         } else if (n == 0 && k > 0){
                 result = 0;
+        } else if (k == 0 && n > 0){
+                result = 0;
         } else {
-                int term1 = k * stirling(n - 1, k, depth + 1);
-                int term2 = stirling(n - 1, k - 1, depth + 1);
-                result = term1 + term2;
+                int a = k * stirling(n - 1, k, depth + 1);
+                int b = stirling(n - 1, k - 1, depth + 1);
+                result = a + b;
         }
         print_indent(depth);
         cout << "<- S(" << n << "," << k << ") = " << result << endl;
@@ -43,7 +43,8 @@ int main() {
                 cin >> n;
                 int bell = 0;
                 if (n == 0){
-                        bell = 0;
+                        cout << "Bell 0 = 0" << endl;
+                        return 0;
                 } else {
                         for (int k = 0; k <= n; k++){
                                 bell += stirling(n,k,0);
