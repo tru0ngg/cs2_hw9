@@ -42,14 +42,11 @@ int main() {
                 int n;
                 cin >> n;
                 int bell = 0;
-                if (n == 0){
-                        cout << "Bell 0 = 0" << endl;
-                        return 0;
-                } else {
-                        for (int k = 0; k <= n; k++){
-                                bell += stirling(n,k,0);
-                        }
+
+                for (int k = 0; k <= n; k++){
+                        bell += stirling(n,k,0);
                 }
+
                 cout << "Bell " << n << " = " << bell << endl;
         } else {
                 return 0;
