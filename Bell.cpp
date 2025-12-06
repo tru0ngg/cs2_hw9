@@ -41,7 +41,7 @@ int main() {
         } else if (type == "Bell"){
                 int n;
                 cin >> n;
-                int bell;
+                int bell = 0;
                 if (n == 0){
                         bell = 0;
                 } else {
