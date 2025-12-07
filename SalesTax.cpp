@@ -39,7 +39,7 @@ int main(){
         }
         cin >> total;
 
-        for (int i = 0; i <= N; i++){
+        for (int i = 0; i < N; ++i){
                 taxed_price[i] = round(price[i] * 1.0625);
         }
 
@@ -49,7 +49,7 @@ int main(){
         }
 
         bool should_print = false;
-        for (int i = 0; i <= N; i++){
+        for (int i = 0; i < N; ++i){
                 if (item[i]){
                         if (should_print){
                                 cout << " ";
